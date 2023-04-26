@@ -49,7 +49,7 @@ pipeline {
           steps {
               sh 'whoami'
               sh 'hostname'
-              sh 'docker build https://github.com/richiinstructor/jenkins.git#main -t richijenkins:latest'
+              sh 'docker build https://github.com/esthergom/jenkins.git#main -t estjenk:latest'
           }
       }        
       stage('Despliegue') {
@@ -62,7 +62,7 @@ pipeline {
               sh 'whoami'
               sh ' echo si el dato anterior es root ... NOS HEMOS VUELTO LOCOS Y VAMOS A MORIR TODOS!!!!!!'
               sh 'hostname'
-              sh 'docker run --name richiapp -tdi -p 5000:5000 richijenkins:latest'
+              sh 'docker run --name estjenkapp -tdi -p 5000:5000 estjenk:latest'
           }
       }
     }
